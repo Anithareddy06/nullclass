@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(215, 161, 161);
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #2a2a2a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .menu {
+            background-color: #181818;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        .menu ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .hero-section {
+            background-image: url("hero-image.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            text-align: center;
+            padding: 100px;
+        }
+        .hero-section h1 {
+            font-family: sans-serif;
+            font-size: 36px;
+            font-weight: 100;
+            color: rgb(90, 20, 20);
+        }
+        .hero-section p {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+            color: white;
+        }
+
+       
+        .main-content {
+            padding: 20px;
+        }
+        .main-content h2 {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 100;
+        }
+        .main-content p {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+        }
+        .main-content img {
+            width: 100%;
+        }
+        .feature-section {
+            padding: 20px;
+            background-color: #E7E7E7;
+        }
+        .feature-section h2 {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 100;
+        }
+        .feature-section li {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+        }
+        .feature-section img {
+            width: 100%;
+        }
+        .contact-form {
+            padding: 20px;
+            background-color: #E7E7E7;
+        }
+        .contact-form h2 {
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 100;
+        }
+        .contact-form p {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 100;
+        }
+        .contact-form input[type=text],
+        .contact-form input[type=email],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .contact-form input[type=submit] {
+            background-color: #2a2a2a;
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+        .footer {
+            padding: 10px;
+            background-color: #2a2a2a;
+            color: white;
+            text-align: center;
+        }
+        @media (max-width: 960px) {
+            .container {
+                width: 90%;
+            }
+            .menu ul li {
+                display: block;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+            .menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My restaurant </h1>
+        </div>
+        <div class="hero-section">
+            <h1>Welcome to My restaurant</h1>
+            <p>Welcome to our food restaurant website! We are excited to offer you a wide variety of delicious dishes.</p>
+          </div>
+        <div class="main-content">
+            <h2>About Me</h2>
+            <p>The restaurant often offers specials that are only available for a limited time, giving customers the chance to take advantage of discounts.All dishes are prepared fresh daily, allowing customers to enjoy the freshest flavors possible.</p>
+  
+        </div>
+        <div class="feature-section">
+            <h2>My Features</h2>
+           <ul >
+            <li>Quality of food: Quality is one of the most important features of a food restaurant. Restaurants should offer high-quality food with fresh ingredients, prepared in a sanitary environment.</li>
+           <li>Pricing: Pricing should be competitive and reasonable. Customers should feel like they are getting a good value for their money.</li>
+           <li>Cleanliness: Cleanliness and hygiene should be a top priority in any food restaurant. Customers should feel confident that the food they are eating is safe and prepared with care.</li>
+          </ul>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <p>Got a question? we would love to hear from you.send us a message and we will response as soon as possible</p>
+            <form action="">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="footer">
+            <p>&copy; Copyright 2019. All Rights Reserved.</p>
+        </div>
+    </div>
+ 
+</body>
+</html>
