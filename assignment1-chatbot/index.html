@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Responsive Chatbot</title>
+		<style>
+			body {
+				font-family: sans-serif;
+				font-size: 14px;
+				background-color: #f5f5f5;
+				margin: 0 auto;
+				max-width: 800px;
+			}
+			#chatbox {
+				background-color: #fff;
+				margin: 20px auto;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #ccc;
+				overflow-y: scroll;
+				max-height: 400px;
+			}
+			#chat-form {
+				width: 100%;
+				padding: 10px;
+				margin-top: 5px;
+				background-color: #ffffff;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				box-shadow: 0 0 5px #ccc;
+			}
+			#chat-form input {
+				width: 100%;
+				line-height: 40px;
+				border: none;
+				background-color: #ffffff;
+				padding: 0 10px;
+				outline: none;
+			}
+			#chat-form button {
+				background-color: #4CAF50;
+				border: none;
+				padding: 0 10px;
+				color: #ffffff;
+				cursor: pointer;
+				line-height: 40px;
+				border-radius: 5px;
+				outline: none;
+			}
+			.user-chat {
+				background-color: #dcf8c6;
+				margin-bottom: 10px;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #ccc;
+				max-width: 70%;
+				float: right;
+				clear: both;
+			}
+			.bot-chat {
+				background-color: #e2e2e2;
+				margin-bottom: 10px;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #ccc;
+				max-width: 70%;
+				float: left;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chatbox"></div>
+		<form id="chat-form">
+			<input type="text" placeholder="Ask a Question...">
+			<button>Send</button>
+		</form>
+		<script>
+			// Get the chatbox div
+			let chatbox = document.getElementById('chatbox');
+			
+			// Get the chat form
+			let chatForm = document.getElementById('chat-form');
+			
+			// Get the input field
+			let inputField = chatForm.querySelector('input');
+			
+			// Get the send button
+			let sendButton = chatForm.querySelector('button');
+			
+			// Handle the submit event
+			chatForm.addEventListener('submit', function(e) {
+				e.preventDefault();
+				
+				// Get the user input
+				let userInput = inputField.value;
+				
+				// Append the user chat
+				chatbox.innerHTML += `<div class="user-chat">${userInput}</div>`;
+				
+				// Append the bot chat
+				chatbox.innerHTML += `<div class="bot-chat">${getAnswer(userInput)}</div>`;
+				
+				// Reset the input field
+				inputField.value = '';
+			});
+			
+			// Get the answer to the user's question
+			function getAnswer(userInput) {
+				// Get the lower case version of the user input
+				userInput = userInput.toLowerCase();
+				
+				// Ouput based on the user input
+				if (userInput.includes('python')) {
+					return 'Python is a high-level, interpreted, interactive and object-oriented scripting language.';
+				} else if (userInput.includes('javascript')) {
+					return 'JavaScript is a high-level, interpreted programming language.';
+				} else if (userInput.includes('php')) {
+					return 'PHP is a server-side scripting language designed for web development.';
+				} else {
+					return 'I don\'t know that one. Can you please rephrase the question?';
+				}
+			}
+		</script>
+	</body>
+</html>
